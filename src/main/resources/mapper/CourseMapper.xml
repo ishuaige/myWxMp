@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niuma.mywechatmp.mapper.CourseMapper">
+
+    <resultMap id="BaseResultMap" type="com.niuma.mywechatmp.model.domain.Course">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="className" column="className" jdbcType="VARCHAR"/>
+            <result property="courseName" column="courseName" jdbcType="VARCHAR"/>
+            <result property="courseWeekly" column="courseWeekly" jdbcType="VARCHAR"/>
+            <result property="courseWeek" column="courseWeek" jdbcType="INTEGER"/>
+            <result property="courseSection" column="courseSection" jdbcType="VARCHAR"/>
+            <result property="weekType" column="weekType" jdbcType="TINYINT"/>
+            <result property="courseAddress" column="courseAddress" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,className,courseName,
+        courseWeekly,courseWeek,courseSection,
+        weekType,courseAddress
+    </sql>
+</mapper>
